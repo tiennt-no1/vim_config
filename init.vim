@@ -52,6 +52,7 @@ Plug 'kenn7/vim-arsync'
 Plug 'tpope/vim-fugitive'
 " to use ctags
 Plug '/kien/ctrlp.vim'
+Plug 'vim-scripts/taglist.vim'
 
 call plug#end()
 " =================end vim plugin=================
