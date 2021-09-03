@@ -50,6 +50,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'kenn7/vim-arsync'
 " comment
 Plug 'tpope/vim-fugitive'
+" to use ctags
+Plug '/kien/ctrlp.vim'
 
 call plug#end()
 " =================end vim plugin=================
