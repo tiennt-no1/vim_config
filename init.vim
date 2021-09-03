@@ -46,7 +46,10 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 "{{ Source code version control }}
 Plug 'tpope/vim-fugitive'
 " Git
-
+" Sync files
+Plug 'kenn7/vim-arsync'
+" comment
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 " =================end vim plugin=================
