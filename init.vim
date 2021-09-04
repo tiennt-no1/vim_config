@@ -2,7 +2,7 @@
 
 call plug#begin('~/Appdata/Local/nvim/plugged')
 " theme plugin
-Plug 'vis'
+" Plug 'vis'
 Plug 'mhartington/oceanic-next'
 
 "{{ File browser }}
@@ -54,6 +54,8 @@ Plug 'tpope/vim-fugitive'
 Plug '/kien/ctrlp.vim'
 Plug 'vim-scripts/taglist.vim'
 
+" full screen
+Plug 'lambdalisue/vim-fullscreen'
 call plug#end()
 " =================end vim plugin=================
 
@@ -79,6 +81,10 @@ set foldlevelstart=99 		"
 set number 					" Show line number
 set ignorecase 				" Enable case-sensitive :
 set clipboard=unnamed
+let g:python3_host_prog = 'C:\Python39\python'
+let g:python_host_prog = 'C:\Python27\python'
+set buftype=
+tnoremap <Esc> <C-\><C-n>
 
 " nerd tree
 nnoremap <C-n> :NERDTree<CR>
@@ -108,9 +114,18 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 
 " fzf
 " [Buffers] Jump to the existing window if possible
- let g:fzf_buffers_jump = 1
+let g:fzf_buffers_jump = 1
 
  " [[B]Commits] Customize the options used by 'git log':
  let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
 
 
+" ctrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+" full screen
+" In ginit.vim
+let g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
+let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
