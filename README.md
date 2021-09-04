@@ -64,4 +64,8 @@ Command	List
 :Helptags	Help tags 1
 :Filetypes	File types
 
+cd to file path
+:cd %:p:h
+:lcd %:p:h
+
 

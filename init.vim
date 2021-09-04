@@ -85,6 +85,7 @@ let g:python3_host_prog = 'C:\Python39\python'
 let g:python_host_prog = 'C:\Python27\python'
 set buftype=
 tnoremap <Esc> <C-\><C-n>
+nnoremap <f2> :let $VIM_DIR=expand('%:p:h')<CR>:cd $VIM_DIR<CR>:terminal<CR>
 
 " nerd tree
 nnoremap <C-n> :NERDTree<CR>
