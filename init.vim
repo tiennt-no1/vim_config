@@ -91,8 +91,12 @@ let g:python_host_prog = 'C:\Python27\python'
 set buftype=
 tnoremap <Esc> <C-\><C-n>
 nnoremap <f2> :let $VIM_DIR=expand('%:p:h')<CR>:cd $VIM_DIR<CR>:terminal<CR>
+" save file hotkey
+noremap <Leader>s :w<CR>
+" open git difftool
 
-" nerd tree
+noremap <Leader>g :! git difftool -y<CR>
+"nerd tree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -174,3 +178,4 @@ let g:NERDToggleCheckAllLines = 1
 
 " nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
 " nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
+
