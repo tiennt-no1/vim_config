@@ -54,6 +54,9 @@ Plug 'tpope/vim-fugitive'
 Plug '/kien/ctrlp.vim'
 Plug 'vim-scripts/taglist.vim'
 
+Plug 'preservim/tagbar'
+
+
 " full screen
 Plug 'lambdalisue/vim-fullscreen'
 call plug#end()
@@ -135,3 +138,6 @@ let g:ctrlp_working_path_mode = 'ra'
 " In ginit.vim
 let g:fullscreen#start_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 1)"
 let g:fullscreen#stop_command = "call rpcnotify(0, 'Gui', 'WindowFullScreen', 0)"
+
+" tagbar -----
+nmap <F8> :TagbarToggle<CR>
