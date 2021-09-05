@@ -61,6 +61,7 @@ Plug 'preservim/tagbar'
 
 " full screen
 Plug 'lambdalisue/vim-fullscreen'
+Plug 'kqito/vim-easy-replace'
 call plug#end()
 " =================end vim plugin=================
 
@@ -91,17 +92,19 @@ let g:python_host_prog = 'C:\Python27\python'
 set buftype=
 tnoremap <Esc> <C-\><C-n>
 nnoremap <f2> :let $VIM_DIR=expand('%:p:h')<CR>:cd $VIM_DIR<CR>:terminal<CR>
+autocmd BufEnter * silent! :lcd%:p:h
 " save file hotkey
 noremap <Leader>s :w<CR>
 " open git difftool
 
 noremap <Leader>g :! git difftool -y<CR>
+noremap <Leader>t :tabedit %<CR>
 "nerd tree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
-autocmd VimEnter * NERDTree | wincmd p
+" autocmd VimEnter * NERDTree | wincmd p
 autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
 " If another buffer tries to replace NERDTree, put it in the other window, and bring back NERDTree.
 autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 |
@@ -132,7 +135,8 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:fzf_buffers_jump = 1
 
  " [[B]Commits] Customize the options used by 'git log':
- let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+let g:fzf_commits_log_options = '--graph --color=always --format="%C(auto)%h%d %s %C(black)%C(bold)%cr"'
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 
 " ctrlP

@@ -68,4 +68,6 @@ cd to file path
 :cd %:p:h
 :lcd %:p:h
 
-
+navigate cusor 
+ctrl-i/o , go to definition ctrl-]
+on single file '' or `` 
