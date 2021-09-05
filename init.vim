@@ -62,6 +62,7 @@ Plug 'preservim/tagbar'
 " full screen
 Plug 'lambdalisue/vim-fullscreen'
 Plug 'kqito/vim-easy-replace'
+Plug 'terryma/vim-expand-region'
 call plug#end()
 " =================end vim plugin=================
 
@@ -180,6 +181,5 @@ let g:NERDTrimTrailingWhitespace = 1
 " Enable NERDCommenterToggle to check all selected lines is commented or not 
 let g:NERDToggleCheckAllLines = 1
 
-" nnoremap <silent> <leader>c} V}:call NERDComment('x', 'toggle')<CR>
-" nnoremap <silent> <leader>c{ V{:call NERDComment('x', 'toggle')<CR>
-
+map K <Plug>(expand_region_expand)
+map J <Plug>(expand_region_shrink)
