@@ -71,3 +71,5 @@ cd to file path
 navigate cusor 
 ctrl-i/o , go to definition ctrl-]
 on single file '' or `` 
+
+settting merge.tool and diff.tool is meld(or other tool )

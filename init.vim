@@ -26,7 +26,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "{{ Terminal }}
 " Plug 'voldikss/vim-floaterm'
-Plug 'gingerhot/conque-term-vim'
+" Plug 'gingerhot/conque-term-vim'
 "Float terminal
 "{{ Code intellisense }}
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -100,7 +100,13 @@ noremap <Leader>s :w<CR>
 
 noremap <Leader>g :! git difftool -y<CR>
 noremap <Leader>t :tabedit %<CR>
-"nerd tree
+" copy/paste like normal
+vmap <C-c> "+yi
+vmap <C-x> "+c
+vmap <C-v> c<ESC>"+p
+imap <C-v> <C-r><C-o>+
+cmap <C-v> <C-r><C-o>+
+" nerd tree
 nnoremap <C-n> :NERDTree<CR>
 nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 nnoremap <C-t> :NERDTreeToggle<CR>
